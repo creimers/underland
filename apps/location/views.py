@@ -6,7 +6,6 @@ from apps.location.models import Location
 
 
 class LocationView(APIView):
-
     def post(self, request, format=None):
         """
         create location instances
@@ -16,4 +15,4 @@ class LocationView(APIView):
         if locations:
             for location in locations:
                 Location.objects.create(data=location)
-        return Response(status=status.HTTP_201_CREATED)
+        return Response({"result": "ok"}, status=status.HTTP_201_CREATED)
