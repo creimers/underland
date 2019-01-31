@@ -7,5 +7,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "corsheaders",
+    "import_export",
     "apps.location",
 ]
